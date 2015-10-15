@@ -1,7 +1,9 @@
 # Slightly Modified Official Jenkins Docker image
 
 I just removed the VOLUME instruction from the Dockerfile so that images inheriting from the it can add files and directories
-to the /var/jenkins_home directory
+to the /var/jenkins_home directory. - Jake
+
+---------
 
 This is a fully functional Jenkins server, based on the Long Term Support release
 http://jenkins-ci.org/
