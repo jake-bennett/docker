@@ -1,6 +1,7 @@
-# Official Jenkins Docker image
+# Slightly Modified Official Jenkins Docker image
 
-The Jenkins Continuous Integration and Delivery server.
+I just removed the VOLUME instruction from the Dockerfile so that images inheriting from the it can add files and directories
+to the /var/jenkins_home directory
 
 This is a fully functional Jenkins server, based on the Long Term Support release
 http://jenkins-ci.org/
