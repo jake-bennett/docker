@@ -12,7 +12,9 @@ RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
 
 # Jenkins home directoy is a volume, so configuration and build history 
 # can be persisted and survive image upgrades
-VOLUME /var/jenkins_home
+# VOLUME /var/jenkins_home
+# Jake 10/14/2015 - Commented out VOLUME instuction. This should be done on RUN. Using the VOLUME instruction
+# makes it impossible to add files and directories to it images that inherit from it.
 
 # `/usr/share/jenkins/ref/` contains all reference configuration we want 
 # to set on a fresh new installation. Use it to bundle additional plugins 
